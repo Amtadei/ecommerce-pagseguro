@@ -39,10 +39,8 @@ class Phone {
         $number = $number->appendChild($number);
 
         return $phone;
-
+        
     }
-
-
 
 }
 

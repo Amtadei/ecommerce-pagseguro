@@ -36,10 +36,10 @@ class Phone {
         $areaCode = $phone->appendChild($areaCode);
 
         $number = $dom->createElement("number", $this->number);
-        $number = $number->appendChild($number);
+        $number = $phone->appendChild($number);
 
         return $phone;
-        
+
     }
 
 }

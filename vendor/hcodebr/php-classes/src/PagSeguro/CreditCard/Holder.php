@@ -21,8 +21,7 @@ class Holder {
         {
             throw new Expection("Informe o nome do comprador.");
         }
-
-
+        
         $this->name = $name;
         $this->cpf = $cpf;
         $this->birthDate = $birthDate;
@@ -58,7 +57,6 @@ class Holder {
         return $holder;
 
     }
-
 
 }
 

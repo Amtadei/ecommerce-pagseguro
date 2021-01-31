@@ -2,6 +2,10 @@
 
 namespace Hcode\PagSeguro;
 
+use Exception;
+use DOMDocument;
+use DOMElement;
+
 class Item {
 
     private $id;
@@ -20,7 +24,7 @@ class Item {
             throw new Expection("Informe o ID do item.");
         }
 
-        if (!$idescription) 
+        if (!$description) 
         {
             throw new Expection("Informe a descrição do item.");
         }

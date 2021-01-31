@@ -2,6 +2,10 @@
 
 namespace Hcode\PagSeguro;
 
+use Exception;
+use DOMDocument;
+use DOMElement;
+
 class Document {
 
     const CPF = "CPF";
@@ -31,7 +35,7 @@ class Document {
 
     }
 
-    public static function isValidCPF($number):bollean
+    public static function isValidCPF($number):bool
     {
 
         $number = preg_replace('/[^0-9]/', '', (string) $number);
@@ -56,7 +60,7 @@ class Document {
     public function getDOMElement():DOMElement
     {
 
-        $dom = new DOMDOcument();
+        $dom = new DOMDocument();
 
         $document = $dom->createElement("document");
         $document = $dom->appendChild($document);

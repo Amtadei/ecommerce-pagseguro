@@ -2,6 +2,11 @@
 
 namespace Hcode\PagSeguro\CreditCard;
 
+use Exception;
+use DOMDocument;
+use DOMElement;
+use Hcode\PagSeguro\Config;
+
 class Installment {
 
     // Parcelas
@@ -11,12 +16,12 @@ class Installment {
 
     public function __construct(int $quantity, float $value) {
 
-        if (!$quantity < 1 || $quantity > Config::MAX_INSTALLMENT) 
+        if ($quantity < 1 || $quantity > Config::MAX_INSTALLMENT) 
         {
-            throw new Expection("Número de parcelas inválido.");
+            throw new Exception("Número de parcelas inválido.");
         }
 
-        if (!$value <= 0) 
+        if ($value <= 0) 
         {
             throw new Expection("Valor total inválido.");
         }
